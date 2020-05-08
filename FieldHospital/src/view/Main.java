@@ -66,6 +66,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        btnExit.setForeground(new java.awt.Color(204, 0, 0));
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logout.png"))); // NOI18N
         btnExit.setText("Exit...");
         btnExit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
