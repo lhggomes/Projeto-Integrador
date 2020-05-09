@@ -23,6 +23,33 @@ public class Patient implements Serializable, BaseEntity {
     private Long id;
     
     private String nome; 
+    private String cpf; 
+    private char sexo; 
+    private int gravidade; 
+
+    public char getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+
+    public int getGravidade() {
+        return gravidade;
+    }
+
+    public void setGravidade(int gravidade) {
+        this.gravidade = gravidade;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
 
     public String getNome() {
         return nome;
