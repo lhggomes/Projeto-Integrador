@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package entity;
 
 import java.io.Serializable;
@@ -8,15 +13,17 @@ import javax.persistence.Id;
 
 /**
  *
- * @author Lucas
+ * @author Iara Silva
  */
 @Entity
-public class Doctor implements Serializable, BaseEntity {
+public class Telefone implements Serializable, EntidadeBase {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Override
     public Long getId() {
         return id;
     }
@@ -25,6 +32,23 @@ public class Doctor implements Serializable, BaseEntity {
         this.id = id;
     }
 
+    private String telefone;
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public Telefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public Telefone() {
+    }
+    
     @Override
     public int hashCode() {
         int hash = 0;
@@ -35,10 +59,10 @@ public class Doctor implements Serializable, BaseEntity {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Doctor)) {
+        if (!(object instanceof Telefone)) {
             return false;
         }
-        Doctor other = (Doctor) object;
+        Telefone other = (Telefone) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -47,7 +71,7 @@ public class Doctor implements Serializable, BaseEntity {
 
     @Override
     public String toString() {
-        return "entity.Doctor[ id=" + id + " ]";
+        return "entity.Telefone[ id=" + id + " ]";
     }
     
 }
