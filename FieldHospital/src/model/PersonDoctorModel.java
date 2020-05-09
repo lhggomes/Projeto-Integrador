@@ -14,6 +14,6 @@ package model;
  *
  * @author Lucas
  */
-public class NewClass {
+public class PersonDoctorModel {
     
 }
