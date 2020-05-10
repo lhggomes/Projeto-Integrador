@@ -1,14 +1,14 @@
 package model;
 
-import entity.Doctor;
-import entity.Consultas;
+
+import entity.Pacientes;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 public class PersonDoctorModel extends AbstractTableModel {
 
-    private String[] columnNames = {"ID_Paciente", "Nome", "Médico", "Ala", "Situação"};
-    private List<Consultas> consultas;
+    private String[] columnNames = {"ID_Paciente", "Nome", "Situação"};
+    private List<Pacientes> pacientes;
 
     @Override
 	public int getColumnCount() {
@@ -17,12 +17,12 @@ public class PersonDoctorModel extends AbstractTableModel {
 
 	@Override
 	public int getRowCount() {
-		return consultas.size();
+		return pacientes.size();
 	}
 
 	@Override
 	public Object getValueAt(int arg0, int arg1) {
-		Consultas c = (Consultas) consultas.toArray()[arg0]; 
+		Pacientes c = (Pacientes) pacientes.toArray()[arg0]; 
 		switch (arg1) {
 		case 0:
 			return c.getId();
@@ -48,8 +48,8 @@ public class PersonDoctorModel extends AbstractTableModel {
 		return null;
 	}
         
-        public Consultas getObjectAtRow(int row) {
-            return consultas.get(row);
+        public Pacientes getObjectAtRow(int row) {
+            return pacientes.get(row);
         }
 
 }
