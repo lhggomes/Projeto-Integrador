@@ -6,7 +6,9 @@
 package view;
 
 import dao.DAOGenerico;
-import entity.Patient;
+import entity.Pacientes;
+
+import java.util.List;
 import javax.swing.DefaultListModel;
 
 /**
@@ -14,9 +16,9 @@ import javax.swing.DefaultListModel;
  * @author Lucas
  */
 public class Main extends javax.swing.JFrame {
-    
-    private DAOGenerico<Patient> pdao; 
-    private boolean novo = false; 
+
+    private DAOGenerico<Pacientes> pdao;
+    private boolean novo = false;
     DefaultListModel<String> modeloLista;
 
     /**
@@ -25,6 +27,7 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         pdao = DAOGenerico.getInstance();
         initComponents();
+
     }
 
     /**
@@ -178,6 +181,21 @@ public class Main extends javax.swing.JFrame {
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
         // TODO add your handling code here:
+        new newUser().setVisible(true);
+
+        /* 
+        
+         Object [] conts = pdao.obtemTodos(Pacientes.class).toArray();
+         long id = 1;
+         if (conts.length != 0){
+         Pacientes Pacientes;
+         Pacientes ultimo = (Pacientes) conts[conts.length -1];
+         id = ultimo.getId() + 1;
+         }
+        
+         limparCampos();
+         */
+
     }//GEN-LAST:event_btnNewActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
@@ -186,7 +204,7 @@ public class Main extends javax.swing.JFrame {
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
-       
+
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStatusActionPerformed
@@ -246,4 +264,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+    private void limparCampos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
