@@ -5,16 +5,25 @@
  */
 package view;
 
+import dao.DAOGenerico;
+import entity.Patient;
+import javax.swing.DefaultListModel;
+
 /**
  *
  * @author Lucas
  */
 public class Main extends javax.swing.JFrame {
+    
+    private DAOGenerico<Patient> pdao; 
+    private boolean novo = false; 
+    DefaultListModel<String> modeloLista;
 
     /**
      * Creates new form Main
      */
     public Main() {
+        pdao = DAOGenerico.getInstance();
         initComponents();
     }
 
