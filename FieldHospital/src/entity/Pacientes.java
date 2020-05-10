@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Pacientes.findByNome", query = "SELECT p FROM Pacientes p WHERE p.nome = :nome"),
     @NamedQuery(name = "Pacientes.findByCpf", query = "SELECT p FROM Pacientes p WHERE p.cpf = :cpf"),
     @NamedQuery(name = "Pacientes.findBySituacao", query = "SELECT p FROM Pacientes p WHERE p.situacao = :situacao")})
-public class Pacientes implements Serializable, BaseEntity {
+public class Pacientes implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -56,7 +56,7 @@ public class Pacientes implements Serializable, BaseEntity {
         this.cpf = cpf;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -112,7 +112,5 @@ public class Pacientes implements Serializable, BaseEntity {
     public String toString() {
         return "entity.Pacientes[ id=" + id + " ]";
     }
-
-    
     
 }
