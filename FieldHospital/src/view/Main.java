@@ -6,7 +6,7 @@
 package view;
 
 import dao.DAOGenerico;
-import entity.Patient;
+import entity.Pacientes;
 import javax.swing.DefaultListModel;
 
 /**
@@ -14,27 +14,12 @@ import javax.swing.DefaultListModel;
  * @author Lucas
  */
 public class Main extends javax.swing.JFrame {
-<<<<<<< HEAD
 
-    private DAOGenerico<Pacientes> pdao;
-    private boolean novo = false;
-=======
     
-    private DAOGenerico<Patient> pdao; 
-    private boolean novo = false; 
->>>>>>> parent of 12ba348... View Procedure
-    DefaultListModel<String> modeloLista;
-
-    /**
-     * Creates new form Main
-     */
+            
     public Main() {
-        pdao = DAOGenerico.getInstance();
-        initComponents();
-<<<<<<< HEAD
+       
 
-=======
->>>>>>> parent of 12ba348... View Procedure
     }
 
     /**
@@ -149,7 +134,7 @@ public class Main extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                        .addGap(18, 18, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -188,7 +173,7 @@ public class Main extends javax.swing.JFrame {
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
         // TODO add your handling code here:
-<<<<<<< HEAD
+
         new newUser().setVisible(true);
 
         /* 
@@ -204,8 +189,6 @@ public class Main extends javax.swing.JFrame {
          limparCampos();
          */
 
-=======
->>>>>>> parent of 12ba348... View Procedure
     }//GEN-LAST:event_btnNewActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
