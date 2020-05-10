@@ -28,7 +28,7 @@ public class DAOGenerico<T extends BaseEntity> {
  
     private EntityManager getEntityManager() {
         EntityManagerFactory factory;
-        factory = Persistence.createEntityManagerFactory("ex2jpaPU");
+        factory = Persistence.createEntityManagerFactory("FieldHospitalPU");
         if (entityManager == null) {
             entityManager = factory.createEntityManager();
         }

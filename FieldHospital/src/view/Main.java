@@ -14,11 +14,12 @@ import javax.swing.DefaultListModel;
  * @author Lucas
  */
 public class Main extends javax.swing.JFrame {
-  
-            
+
+    private DAOGenerico<Pacientes> pdao;
+
     public Main() {
+        pdao = DAOGenerico.getInstance();
         initComponents();
-       
 
     }
 
