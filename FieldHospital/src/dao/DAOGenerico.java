@@ -4,10 +4,14 @@ package dao;
 
 
 import entity.BaseEntity;
+<<<<<<< HEAD
 import java.util.Collection;
 
 
 import java.util.List;
+=======
+import java.awt.List;
+>>>>>>> parent of 12ba348... View Procedure
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -57,8 +61,8 @@ public class DAOGenerico<T extends BaseEntity> {
         }
     }
 
-    public List<T> obtemTodos(Class<T> classe) {
-        return entityManager.createNamedQuery(classe.getSimpleName()+".findAll").getResultList();
+    public java.util.List<T> obtemTodos(Class<T> classe) {
+        return entityManager.createNamedQuery(classe.getSimpleName() + ".findAll").getResultList();
     }
 
     public void apaga(Class<T> classe, T c) {

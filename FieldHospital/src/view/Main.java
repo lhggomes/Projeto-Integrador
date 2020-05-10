@@ -6,9 +6,7 @@
 package view;
 
 import dao.DAOGenerico;
-import entity.Pacientes;
-
-import java.util.List;
+import entity.Patient;
 import javax.swing.DefaultListModel;
 
 /**
@@ -16,9 +14,15 @@ import javax.swing.DefaultListModel;
  * @author Lucas
  */
 public class Main extends javax.swing.JFrame {
+<<<<<<< HEAD
 
     private DAOGenerico<Pacientes> pdao;
     private boolean novo = false;
+=======
+    
+    private DAOGenerico<Patient> pdao; 
+    private boolean novo = false; 
+>>>>>>> parent of 12ba348... View Procedure
     DefaultListModel<String> modeloLista;
 
     /**
@@ -27,7 +31,10 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         pdao = DAOGenerico.getInstance();
         initComponents();
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 12ba348... View Procedure
     }
 
     /**
@@ -181,6 +188,7 @@ public class Main extends javax.swing.JFrame {
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
         new newUser().setVisible(true);
 
         /* 
@@ -196,6 +204,8 @@ public class Main extends javax.swing.JFrame {
          limparCampos();
          */
 
+=======
+>>>>>>> parent of 12ba348... View Procedure
     }//GEN-LAST:event_btnNewActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
@@ -264,8 +274,4 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
-
-    private void limparCampos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
