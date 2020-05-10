@@ -14,10 +14,10 @@ import javax.swing.DefaultListModel;
  * @author Lucas
  */
 public class Main extends javax.swing.JFrame {
-
-    
+  
             
     public Main() {
+        initComponents();
        
 
     }
