@@ -1,17 +1,11 @@
 package dao;
 
 
-
-
 import entity.BaseEntity;
-<<<<<<< HEAD
+
 import java.util.Collection;
 
-
 import java.util.List;
-=======
-import java.awt.List;
->>>>>>> parent of 12ba348... View Procedure
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -34,7 +28,7 @@ public class DAOGenerico<T extends BaseEntity> {
  
     private EntityManager getEntityManager() {
         EntityManagerFactory factory;
-        factory = Persistence.createEntityManagerFactory("FieldHospitalPU");
+        factory = Persistence.createEntityManagerFactory("ex2jpaPU");
         if (entityManager == null) {
             entityManager = factory.createEntityManager();
         }
@@ -61,8 +55,8 @@ public class DAOGenerico<T extends BaseEntity> {
         }
     }
 
-    public java.util.List<T> obtemTodos(Class<T> classe) {
-        return entityManager.createNamedQuery(classe.getSimpleName() + ".findAll").getResultList();
+    public List<T> obtemTodos(Class<T> classe) {
+        return entityManager.createNamedQuery(classe.getSimpleName()+".findAll").getResultList();
     }
 
     public void apaga(Class<T> classe, T c) {
