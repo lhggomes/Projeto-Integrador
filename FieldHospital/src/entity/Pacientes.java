@@ -25,9 +25,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "Pacientes.findAll", query = "SELECT p FROM Pacientes p"),
     @NamedQuery(name = "Pacientes.findById", query = "SELECT p FROM Pacientes p WHERE p.id = :id"),
-    @NamedQuery(name = "Pacientes.findByNome", query = "SELECT p FROM Pacientes p WHERE p.nome = :nome"),
-    @NamedQuery(name = "Pacientes.findByCpf", query = "SELECT p FROM Pacientes p WHERE p.cpf = :cpf"),
-    @NamedQuery(name = "Pacientes.findBySituacao", query = "SELECT p FROM Pacientes p WHERE p.situacao = :situacao")})
+    @NamedQuery(name = "Pacientes.findByNome", query = "SELECT p FROM Pacientes p WHERE p.nome LIKE :nome"),
+    @NamedQuery(name = "Pacientes.findByCpf", query = "SELECT p FROM Pacientes p WHERE p.cpf LIKE :cpf"),
+    @NamedQuery(name = "Pacientes.findBySituacao", query = "SELECT p FROM Pacientes p WHERE p.situacao LIKE :situacao")})
 public class Pacientes implements Serializable, BaseEntity {
     private static final long serialVersionUID = 1L;
     @Id

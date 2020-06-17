@@ -58,6 +58,22 @@ public class DAOGenerico<T extends BaseEntity> {
     public List<T> obtemTodos(Class<T> classe) {
         return entityManager.createNamedQuery(classe.getSimpleName()+".findAll").getResultList();
     }
+    
+    public List<T> obtemPorNome(Class<T> classe, String nome){
+        return entityManager.createNamedQuery(classe.getSimpleName()+".findByNome").setParameter("nome", "%" + nome + "%").getResultList();
+    }
+    
+    public List<T> obtemPorCpf(Class<T> classe, String cpf){
+        return entityManager.createNamedQuery(classe.getSimpleName()+".findByCpf").setParameter("nome", "%" + cpf + "%").getResultList();
+    }
+    
+    public List<T> obtemPorSituacao(Class<T> classe, String situacao){
+        return entityManager.createNamedQuery(classe.getSimpleName()+".findBySituacao").setParameter("nome", "%" + situacao + "%").getResultList();
+    }
+    
+    public List<T> obtemPorCrm(Class<T> classe, String crm){
+        return entityManager.createNamedQuery(classe.getSimpleName()+".findByCrm").setParameter("nome", "%" + crm + "%").getResultList();
+    }
 
     public void apaga(Class<T> classe, T c) {
         try {
