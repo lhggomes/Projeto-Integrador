@@ -65,7 +65,8 @@ Database
 ---------
 
 You'll need a xampp server (more common used) to create the database to run the application. 
-You can use any database as you prefer, but you can download xampp in <https://www.apachefriends.org/download.html>
+You can use any database as you prefer. 
+You can download xampp in <https://www.apachefriends.org/download.html>
 
 Built With
 ----------
